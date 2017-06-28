@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuze.user.dao.IUserDao">
+    <resultMap id="User" type="com.yuze.user.po.User">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="username"/>
+        <result property="passWord" column="password"/>
+        <result property="salt" column="salt"/>
+        <result property="realName" column="realname"/>
+        <result property="email" column="email"/>
+    </resultMap>
+    <select id="selectByCondition" parameterType="map" resultMap="User">
+        SELECT user_id, username, password, salt, realname, email FROM upms_user
+        WHERE
+        <if test="user_id != null">
+            user_id = #{userId}
+        </if>
+        <if test="userName != null">
+            username = #{userName}
+        </if>
+        <if test="realName != null">
+            realname = #{realName}
+        </if>
+    </select>
+</mapper>
