@@ -46,10 +46,10 @@
         </commentGenerator>
 
         <!-- 数据库连接 -->
-        <jdbcConnection driverClass="${generator.jdbc.driver}"
-                        connectionURL="${generator.jdbc.url}"
-                        userId="${generator.jdbc.username}"
-                        password="${generator_jdbc_password}" />
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/yuze"
+                        userId="root"
+                        password="123456" />
 
         <!-- model生成 -->
         <javaModelGenerator targetPackage="${generator_javaModelGenerator_targetPackage}" targetProject="${targetProject}/src/main/java" />
