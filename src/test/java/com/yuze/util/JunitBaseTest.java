@@ -5,7 +5,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 
 @RunWith(CustomJunit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:spring/applicationContext-mybatis.xml","classpath*:spring/springMVC-servlet.xml", "classpath*:spring/applicationContext-spring.xml"})
+@ContextConfiguration(locations = {"classpath*:spring/springMVC-servlet.xml", "file:src/test/resources/spring/test-applicationContext-spring.xml"})
 public class JunitBaseTest {
 
 }

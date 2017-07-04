@@ -8,9 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -35,8 +33,6 @@ public class GeneralController extends BaseController {
     @RequestMapping("404")
     public String go404(HttpServletResponse response) throws FileNotFoundException {
         response.setStatus(404);
-        BufferedReader reader = new BufferedReader(new FileReader("abc.txt"));
-        String string = reader.readLine();
         return "404";
     }
 }

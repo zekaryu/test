@@ -55,6 +55,7 @@
     <!-- 扫描mybatis映射接口类 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.yuze.*.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
     <!-- 事物管理 -->
@@ -79,8 +80,8 @@
         </tx:attributes>
     </tx:advice>
 
-    <aop:config>
-        <aop:pointcut id="pc" expression="execution(* com.yuze.*.service.*.*(..))" /> <!--把事务控制在Service层-->
+    <!--<aop:config>
+        <aop:pointcut id="pc" expression="execution(* com.yuze.*.service.*.*(..))" /> &lt;!&ndash;把事务控制在Service层&ndash;&gt;
         <aop:advisor pointcut-ref="pc" advice-ref="userTxAdvice" />
-    </aop:config>
+    </aop:config>-->
 </beans>
