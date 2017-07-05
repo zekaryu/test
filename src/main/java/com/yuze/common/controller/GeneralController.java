@@ -24,15 +24,16 @@ public class GeneralController extends BaseController {
      */
     private static final Logger logger = LoggerFactory.getLogger(GeneralController.class);
 
-    @RequestMapping(value = "yuze",method = RequestMethod.GET)
-    public String index(){
-        logger.info("get index");
-        return "index";
-    }
+
 
     @RequestMapping("404")
     public String go404(HttpServletResponse response) throws FileNotFoundException {
         response.setStatus(404);
         return "404";
+    }
+
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public String goLoginPage(){
+        return "login";
     }
 }

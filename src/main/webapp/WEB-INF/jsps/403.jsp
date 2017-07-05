@@ -25,8 +25,8 @@
                 <div class="am-u-sm-12">
                     <h2 class="am-text-center am-text-xxxl am-margin-top-lg">403. Forbidden</h2>
                     <p class="am-text-center">没有权限访问此页面</p>
-                    <a href="${basePath}/index.html" class="am-btn am-btn-primary">主页</a>
-                    <a href="${basePath}/index.html" class="am-btn am-btn-lg get-btn">主页</a>
+                    <a href="${basePath}/login" class="am-btn am-btn-primary">主页</a>
+                    <a href="${basePath}/login" class="am-btn am-btn-lg get-btn">主页</a>
                     <pre class="page-403">
 
           .----.

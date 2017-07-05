@@ -21,8 +21,9 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--&lt;!&ndash; 静态资源 &ndash;&gt;
+    <!-- 静态资源 -->
     <mvc:resources mapping="/assets/**" location="/assets/" />
-    &lt;!&ndash; 公共下载 &ndash;&gt;
-    <mvc:resources mapping="/res/**" location="/res/" />-->
+    <!-- 公共下载 -->
+    <mvc:resources mapping="/res/**" location="/res/" />
+    <mvc:resources mapping="/WEB-INF/**" location="/WEB-INF/" />
 </beans>
