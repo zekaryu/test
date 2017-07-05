@@ -27,7 +27,7 @@
                     <p class="am-text-center">没有找到你要的页面</p>
                     <div class="am-form-group">
                         <div class="am-u-lg-12 am-u-lg-push-5">
-                            <a href="${basePath}/yuze" class="am-btn am-btn-primary am-text-center">主页</a>
+                            <a href="${basePath}/login" class="am-btn am-btn-primary am-text-center">主页</a>
                         </div>
                     </div>
                     <pre class="page-404">
