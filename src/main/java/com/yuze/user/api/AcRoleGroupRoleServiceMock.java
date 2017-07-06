@@ -7,8 +7,8 @@ import com.yuze.user.model.AcRoleGroupRoleExample;
 
 /**
 * 降级实现AcRoleGroupRoleService接口
-* Created by yuze on 2017/7/3.
+* Created by yuze on 2017/7/6.
 */
-public class AcRoleGroupRoleServiceMock extends BaseServiceMock<AcRoleGroupRoleMapper, AcRoleGroupRole, AcRoleGroupRoleExample> implements AcRoleGroupRoleService {
+public class AcRoleGroupRoleServiceMock extends BaseServiceMock<AcRoleGroupRoleMapper, AcRoleGroupRole, AcRoleGroupRoleExample, Integer> implements AcRoleGroupRoleService {
 
 }

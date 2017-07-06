@@ -7,8 +7,8 @@ import com.yuze.user.model.AcUserAuthExample;
 
 /**
 * 降级实现AcUserAuthService接口
-* Created by yuze on 2017/7/3.
+* Created by yuze on 2017/7/6.
 */
-public class AcUserAuthServiceMock extends BaseServiceMock<AcUserAuthMapper, AcUserAuth, AcUserAuthExample> implements AcUserAuthService {
+public class AcUserAuthServiceMock extends BaseServiceMock<AcUserAuthMapper, AcUserAuth, AcUserAuthExample, Integer> implements AcUserAuthService {
 
 }

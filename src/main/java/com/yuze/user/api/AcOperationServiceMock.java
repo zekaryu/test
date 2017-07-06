@@ -7,8 +7,8 @@ import com.yuze.user.model.AcOperationExample;
 
 /**
 * 降级实现AcOperationService接口
-* Created by yuze on 2017/7/3.
+* Created by yuze on 2017/7/6.
 */
-public class AcOperationServiceMock extends BaseServiceMock<AcOperationMapper, AcOperation, AcOperationExample> implements AcOperationService {
+public class AcOperationServiceMock extends BaseServiceMock<AcOperationMapper, AcOperation, AcOperationExample, Integer> implements AcOperationService {
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by yuze on 2017/7/3. All rights reserved.
  */
-public abstract class BaseServiceImpl<Mapper, Record, Example> implements BaseService<Record, Example> {
+public abstract class BaseServiceImpl<Mapper, Record, Example, PK> implements BaseService<Record, Example, PK> {
 
     public Mapper mapper;
 
@@ -20,7 +20,7 @@ public abstract class BaseServiceImpl<Mapper, Record, Example> implements BaseSe
     }
 
     @Override
-    public int deleteByPrimaryKey(Integer id) {
+    public int deleteByPrimaryKey(PK key) {
         return 0;
     }
 
@@ -75,7 +75,7 @@ public abstract class BaseServiceImpl<Mapper, Record, Example> implements BaseSe
     }
 
     @Override
-    public Record selectByPrimaryKey(Integer id) {
+    public Record selectByPrimaryKey(PK key) {
         return null;
     }
 

@@ -24,7 +24,10 @@ public class GeneralController extends BaseController {
      */
     private static final Logger logger = LoggerFactory.getLogger(GeneralController.class);
 
-
+    @RequestMapping(value = "index", method = RequestMethod.GET)
+    public String goIdexPage(){
+        return "index";
+    }
 
     @RequestMapping("404")
     public String go404(HttpServletResponse response) throws FileNotFoundException {

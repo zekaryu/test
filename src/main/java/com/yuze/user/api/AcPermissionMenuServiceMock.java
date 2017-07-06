@@ -7,8 +7,8 @@ import com.yuze.user.model.AcPermissionMenuExample;
 
 /**
 * 降级实现AcPermissionMenuService接口
-* Created by yuze on 2017/7/3.
+* Created by yuze on 2017/7/6.
 */
-public class AcPermissionMenuServiceMock extends BaseServiceMock<AcPermissionMenuMapper, AcPermissionMenu, AcPermissionMenuExample> implements AcPermissionMenuService {
+public class AcPermissionMenuServiceMock extends BaseServiceMock<AcPermissionMenuMapper, AcPermissionMenu, AcPermissionMenuExample, Integer> implements AcPermissionMenuService {
 
 }

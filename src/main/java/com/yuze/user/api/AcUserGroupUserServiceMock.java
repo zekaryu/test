@@ -7,8 +7,8 @@ import com.yuze.user.model.AcUserGroupUserExample;
 
 /**
 * 降级实现AcUserGroupUserService接口
-* Created by yuze on 2017/7/3.
+* Created by yuze on 2017/7/6.
 */
-public class AcUserGroupUserServiceMock extends BaseServiceMock<AcUserGroupUserMapper, AcUserGroupUser, AcUserGroupUserExample> implements AcUserGroupUserService {
+public class AcUserGroupUserServiceMock extends BaseServiceMock<AcUserGroupUserMapper, AcUserGroupUser, AcUserGroupUserExample, Integer> implements AcUserGroupUserService {
 
 }

@@ -7,8 +7,8 @@ import com.yuze.user.model.AcPermissionOperationExample;
 
 /**
 * 降级实现AcPermissionOperationService接口
-* Created by yuze on 2017/7/3.
+* Created by yuze on 2017/7/6.
 */
-public class AcPermissionOperationServiceMock extends BaseServiceMock<AcPermissionOperationMapper, AcPermissionOperation, AcPermissionOperationExample> implements AcPermissionOperationService {
+public class AcPermissionOperationServiceMock extends BaseServiceMock<AcPermissionOperationMapper, AcPermissionOperation, AcPermissionOperationExample, Integer> implements AcPermissionOperationService {
 
 }

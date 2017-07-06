@@ -48,7 +48,7 @@
         <javaModelGenerator targetPackage="com.yuze.user.model" targetProject="src/main/java" />
 
         <!-- MapperXML生成 -->
-        <sqlMapGenerator targetPackage="com.yuze.user.mappers" targetProject="src/main/java" />
+        <sqlMapGenerator targetPackage="user" targetProject="src/main/resources/database/mappers" />
 
         <!-- Mapper接口生成 -->
         <javaClientGenerator targetPackage="com.yuze.user.dao" targetProject="src/main/java" type="XMLMAPPER" />
