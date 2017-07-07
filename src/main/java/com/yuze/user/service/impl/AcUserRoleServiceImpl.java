@@ -5,6 +5,8 @@ import com.yuze.framework.service.BaseServiceImpl;
 import com.yuze.user.dao.AcUserRoleMapper;
 import com.yuze.user.model.AcUserRole;
 import com.yuze.user.model.AcUserRoleExample;
+import com.yuze.user.service.AcUserRoleService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
 * AcUserRoleService实现
-* Created by yuze on 2017/7/6.
+* Created by yuze on 2017/7/7.
 */
 @Service
 @Transactional

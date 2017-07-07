@@ -5,6 +5,8 @@ import com.yuze.framework.service.BaseServiceImpl;
 import com.yuze.user.dao.AcPermissionMapper;
 import com.yuze.user.model.AcPermission;
 import com.yuze.user.model.AcPermissionExample;
+import com.yuze.user.service.AcPermissionService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
 * AcPermissionService实现
-* Created by yuze on 2017/7/6.
+* Created by yuze on 2017/7/7.
 */
 @Service
 @Transactional

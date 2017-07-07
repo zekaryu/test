@@ -5,6 +5,8 @@ import com.yuze.framework.service.BaseServiceImpl;
 import com.yuze.user.dao.AcUserInfoMapper;
 import com.yuze.user.model.AcUserInfo;
 import com.yuze.user.model.AcUserInfoExample;
+import com.yuze.user.service.AcUserInfoService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
 * AcUserInfoService实现
-* Created by yuze on 2017/7/6.
+* Created by yuze on 2017/7/7.
 */
 @Service
 @Transactional

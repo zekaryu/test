@@ -1,18 +1,24 @@
 package com.yuze.user.dao;
 
 import com.yuze.framework.dao.IBaseDaoTest;
+import com.yuze.user.model.AcPermission;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-/**
- * Created by yuze on 2017/7/3. All rights reserved.
- */
-public class AcUserMapperTest extends IBaseDaoTest {
+import java.util.List;
 
+/**
+ * Created by yuze on 2017/7/7. All rights reserved.
+ */
+public class AcPermissionMapperTest extends IBaseDaoTest {
+
+    Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-//    private AcUserMapper acUserMapper;
+    AcPermissionMapper permissionMapper;
 
     @org.junit.Test
     public void countByExample() throws Exception {
@@ -28,12 +34,6 @@ public class AcUserMapperTest extends IBaseDaoTest {
 
     @Test
     public void insert() throws Exception {
-
-
-//        AcUser user = new AcUser();
-//        user.setIsActive((byte) 1);
-
-//        acUserMapper.insert(user);
     }
 
     @Test
@@ -62,6 +62,15 @@ public class AcUserMapperTest extends IBaseDaoTest {
 
     @Test
     public void updateByPrimaryKey() throws Exception {
+    }
+
+    @Test
+    public void selectPermissionsByRoleId() throws Exception {
+        List<AcPermission> permissions = permissionMapper.selectPermissionsByRoleId((long) 1);
+        if (logger.isInfoEnabled()) {
+            permissions.stream().forEach(s->logger.info(String.valueOf(s)));
+        }
+
     }
 
 }

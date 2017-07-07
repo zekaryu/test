@@ -1,7 +1,5 @@
 package com.yuze.user.dao;
 
-import com.yuze.user.model.AcUser;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.web.WebAppConfiguration;
 
@@ -49,9 +47,9 @@ public class Test {
 ////        }
         String[] locations = {"spring/applicationContext-mybatis.xml", "spring/applicationContext-spring.xml", "spring/springMVC-servlet.xml"};
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(locations);
-        AcElementMapper mapper = (AcElementMapper) context.getBean(com.yuze.user.dao.AcElementMapper.class);
-        AcUser user = new AcUser();
-        user.setIsActive((byte) 1);
+//        AcElementMapper mapper = (AcElementMapper) context.getBean(com.yuze.user.dao.AcElementMapper.class);
+//        AcUser user = new AcUser();
+//        user.setIsActive((byte) 1);
 
     }
 }

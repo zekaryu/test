@@ -55,13 +55,7 @@
 
         <!-- 需要映射的表 -->
         <!-- 需要映射的表 -->
-                                    <table tableName="ac_element" domainObjectName="AcElement"></table>
-                                                <table tableName="ac_menu" domainObjectName="AcMenu"></table>
-                                                <table tableName="ac_operation" domainObjectName="AcOperation"></table>
-                                                <table tableName="ac_permission" domainObjectName="AcPermission"></table>
-                                                <table tableName="ac_permission_element" domainObjectName="AcPermissionElement"></table>
-                                                <table tableName="ac_permission_menu" domainObjectName="AcPermissionMenu"></table>
-                                                <table tableName="ac_permission_operation" domainObjectName="AcPermissionOperation"></table>
+                                    <table tableName="ac_permission" domainObjectName="AcPermission"></table>
                                                 <table tableName="ac_role" domainObjectName="AcRole"></table>
                                                 <table tableName="ac_role_group" domainObjectName="AcRoleGroup"></table>
                                                 <table tableName="ac_role_group_role" domainObjectName="AcRoleGroupRole"></table>

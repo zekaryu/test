@@ -94,9 +94,9 @@
     <!-- Cache配置 -->
     <cache:annotation-driven cache-manager="cacheManager"/>
     <bean id="ehCacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
-        <property name="configLocation" value="classpath*:cache/ehcache.xml"/>
+        <property name="configLocation" value="classpath:cache/ehcache.xml"/>
     </bean>
     <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
-        <property name="cacheManager" value="ehCacheManagerFactory" />
+        <property name="cacheManager" ref="ehCacheManagerFactory" />
     </bean>
 </beans>

@@ -4,10 +4,11 @@ import com.yuze.framework.service.BaseServiceMock;
 import com.yuze.user.dao.AcUserMapper;
 import com.yuze.user.model.AcUser;
 import com.yuze.user.model.AcUserExample;
+import com.yuze.user.service.AcUserService;
 
 /**
 * 降级实现AcUserService接口
-* Created by yuze on 2017/7/6.
+* Created by yuze on 2017/7/7.
 */
 public class AcUserServiceMock extends BaseServiceMock<AcUserMapper, AcUser, AcUserExample, Integer> implements AcUserService {
 

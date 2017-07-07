@@ -1,8 +1,13 @@
-package com.yuze.user.dao;
+package com.yuze.framework.dao;
 
+import com.yuze.util.CustomJunit4ClassRunner;
 import com.yuze.util.JunitBaseTest;
 
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
 
+@RunWith(CustomJunit4ClassRunner.class)
+@ContextConfiguration(locations = {"file:src/test/resources/spring/test-applicationContext-spring.xml"})
 public class IBaseDaoTest extends JunitBaseTest{
 //    static{
 //        Properties props = new Properties();

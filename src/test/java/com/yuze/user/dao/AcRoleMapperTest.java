@@ -1,18 +1,25 @@
 package com.yuze.user.dao;
 
 import com.yuze.framework.dao.IBaseDaoTest;
+import com.yuze.user.model.AcRole;
+import com.yuze.user.model.AcRoleExample;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.time.Instant;
+import java.util.Date;
 
 /**
- * Created by yuze on 2017/7/3. All rights reserved.
+ * Created by yuze on 2017/7/7. All rights reserved.
  */
-public class AcUserMapperTest extends IBaseDaoTest {
-
+@Transactional
+public class AcRoleMapperTest extends IBaseDaoTest {
 
     @Autowired
-//    private AcUserMapper acUserMapper;
+    AcRoleMapper roleMapper;
 
     @org.junit.Test
     public void countByExample() throws Exception {
@@ -20,6 +27,9 @@ public class AcUserMapperTest extends IBaseDaoTest {
 
     @Test
     public void deleteByExample() throws Exception {
+        AcRoleExample roleExample = new AcRoleExample();
+        roleExample.or().andNameEqualTo("user1");
+        Assert.assertEquals(1, roleMapper.deleteByExample(roleExample));
     }
 
     @Test
@@ -28,12 +38,11 @@ public class AcUserMapperTest extends IBaseDaoTest {
 
     @Test
     public void insert() throws Exception {
-
-
-//        AcUser user = new AcUser();
-//        user.setIsActive((byte) 1);
-
-//        acUserMapper.insert(user);
+        AcRole role = new AcRole();
+        role.setName("user1");
+        role.setGmtCreate(Date.from(Instant.now()));
+        role.setGmtModified(Date.from(Instant.now()));
+        Assert.assertEquals(1, roleMapper.insert(role));
     }
 
     @Test
@@ -62,6 +71,10 @@ public class AcUserMapperTest extends IBaseDaoTest {
 
     @Test
     public void updateByPrimaryKey() throws Exception {
+    }
+
+    @Test
+    public void selectRolesByUserId() throws Exception {
     }
 
 }
