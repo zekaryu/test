@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <jsp:include page="/WEB-INF/jsps/head.jsp"/>
+    <%@ include file="/WEB-INF/jsps/head.jsp" %>
 </head>
 <body>
 <a>${basePath}</a>
