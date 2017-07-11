@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <jsp:include page="/WEB-INF/jsps/head.jsp"/>
+    <%@ include file="/WEB-INF/jsps/head.jsp" %>
 </head>
 <body>
-<a>${basePath}</a>
 <!--[if lte IE 9]>
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
     以获得更好的体验！</p>
@@ -27,7 +26,8 @@
                     <p class="am-text-center">没有找到你要的页面</p>
                     <div class="am-form-group">
                         <div class="am-u-lg-12 am-u-lg-push-5">
-                            <a href="${basePath}/login" class="am-btn am-btn-primary am-text-center">主页</a>
+                            <a href="${basePath}/index"
+                               class="am-btn am-btn-primary am-text-center">主页</a>
                         </div>
                     </div>
                     <pre class="page-404">

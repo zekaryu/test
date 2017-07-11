@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <jsp:include page="/WEB-INF/jsps/head.jsp"/>
+    <%@ include file="/WEB-INF/jsps/head.jsp" %>
     <style>
         .header {
             text-align: center;
@@ -20,7 +20,6 @@
     </style>
 </head>
 <body>
-<a>${basePath}</a>
 <!--[if lte IE 9]>
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
         href="http://browsehappy.com/" target="_blank">升级浏览器</a>
@@ -29,6 +28,8 @@
 <div class="header">
     <div class="am-g">
         <h1>Web ide</h1>
+        <p><%=path%>
+        </p>
         <p>Integrated Development Environment<br/>代码编辑，代码生成，界面设计，调试，编译</p>
     </div>
     <hr/>
@@ -48,12 +49,12 @@
         <br>
         <br>
 
-        <form method="post" class="am-form">
+        <form method="post" class="am-form" action="/login">
             <label for="username">用户名:</label>
-            <input type="username" name="" id="username" value="">
+            <input type="username" name="identifier" id="username" value="">
             <br>
             <label for="password">密码:</label>
-            <input type="password" name="" id="password" value="">
+            <input type="password" name="credential" id="password" value="">
             <br>
             <label for="remember-me">
                 <input id="remember-me" type="checkbox">
@@ -83,27 +84,7 @@
 </footer>
 <jsp:include page="/WEB-INF/jsps/script.jsp"/>
 <script>
-    $(function() {
-        $('#id').click(function () {
-            var username = $('#username');
-            var password = $('#password');
-            $.ajax({
-                dataType:"json",
-                type : "post",
-                url : ${basePath} + '/login',
-                data :{
-                    username: username,
-                    password : password
-                },
-                success: function (data) {
 
-                },
-                error:function (data) {
-
-                }
-                   });
-        });
-    })
 </script>
 </body>
 </html>

@@ -8,7 +8,9 @@
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="realm" ref="customRealm"/>
     </bean>
-
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <!--shiro核心安全接口，必须要-->
         <property name="securityManager" ref="securityManager"/>
@@ -19,7 +21,7 @@
         <!-- 用户访问未对其授权的资源时,所显示的连接 -->
         <!-- 若想更明显的测试此属性可以修改它的值,如unauthor.jsp,然后登录后访问/admin/listUser.jsp就看见浏览器会显示unauthor.jsp -->
         <property name="unauthorizedUrl" value="/403"/>
-        <property name="successUrl" value="/index"/>
+        <property name="successUrl" value="/"/>
         <!-- Shiro连接约束配置,即过滤链的定义 -->
         <!-- 此处可配合这篇文章来理解各个过滤连的作用http://blog.csdn.net/jadyer/article/details/12172839 -->
         <!-- 下面value值的第一个'/'代表的路径是相对于HttpServletRequest.getContextPath()的值来的 -->
@@ -31,9 +33,10 @@
                 /assets/** =anon
                 /res/** =anon
                 <!-- 登录页允许访问 -->
-                /login=anon
+                /login = anon
                 <!-- 其他资源需要认证 -->
-                /**=authc
+                /** = authc
+
             </value>
         </property>
     </bean>

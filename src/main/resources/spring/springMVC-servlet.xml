@@ -17,6 +17,9 @@
     <!-- 开启注解 -->
     <mvc:annotation-driven/>
 
+    <!-- 默认访问跳转到登录页面(即定义无需Controller的url<->view直接映射) -->
+    <mvc:view-controller path="/" view-name="forward:/login"/>
+
     <!-- 支持返回json(避免IE在ajax请求时，返回json出现下载 ) -->
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="messageConverters">
@@ -25,6 +28,7 @@
             </list>
         </property>
     </bean>
+    <!-- 支持返回json -->
     <bean id="mappingJacksonHttpMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
         <property name="supportedMediaTypes">
@@ -34,7 +38,7 @@
             </list>
         </property>
     </bean>
-    <!-- 支持返回json -->
+
 
     <!--视图渲染-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -58,7 +62,5 @@
 
     <!-- 启用shrio授权注解拦截方式 -->
     <aop:config proxy-target-class="true"></aop:config>
-    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
-        <property name="securityManager" ref="securityManager"/>
-    </bean>
+
 </beans>
