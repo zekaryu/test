@@ -7,46 +7,46 @@ import java.util.List;
 /**
  * Created by yuze on 2017/7/3. All rights reserved.
  */
-public interface BaseService<Record, Example> {
+public interface BaseService<Model, Example, PK> {
     int countByExample(Example example);
 
     int deleteByExample(Example example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(PK key);
 
-    int insert(Record record);
+    int insert(Model model);
 
-    int insertSelective(Record record);
+    int insertSelective(Model model);
 
-    List<Record> selectByExampleWithBLOBs(Example example);
+    List<Model> selectByExampleWithBLOBs(Example example);
 
-    List<Record> selectByExample(Example example);
+    List<Model> selectByExample(Example example);
 
-    List<Record> selectByExampleWithBLOBsForStartPage(Example example, Integer pageNum, Integer pageSize);
+    List<Model> selectByExampleWithBLOBsForStartPage(Example example, Integer pageNum, Integer pageSize);
 
-    List<Record> selectByExampleForStartPage(Example example, Integer pageNum, Integer pageSize);
+    List<Model> selectByExampleForStartPage(Example example, Integer pageNum, Integer pageSize);
 
-    List<Record> selectByExampleWithBLOBsForOffsetPage(Example example, Integer offset, Integer limit);
+    List<Model> selectByExampleWithBLOBsForOffsetPage(Example example, Integer offset, Integer limit);
 
-    List<Record> selectByExampleForOffsetPage(Example example, Integer offset, Integer limit);
+    List<Model> selectByExampleForOffsetPage(Example example, Integer offset, Integer limit);
 
-    Record selectFirstByExample(Example example);
+    Model selectFirstByExample(Example example);
 
-    Record selectFirstByExampleWithBLOBs(Example example);
+    Model selectFirstByExampleWithBLOBs(Example example);
 
-    Record selectByPrimaryKey(Integer id);
+    Model selectByPrimaryKey(PK key);
 
-    int updateByExampleSelective(@Param("record") Record record, @Param("example") Example example);
+    int updateByExampleSelective(@Param("model") Model model, @Param("example") Example example);
 
-    int updateByExampleWithBLOBs(@Param("record") Record record, @Param("example") Example example);
+    int updateByExampleWithBLOBs(@Param("model") Model model, @Param("example") Example example);
 
-    int updateByExample(@Param("record") Record record, @Param("example") Example example);
+    int updateByExample(@Param("model") Model model, @Param("example") Example example);
 
-    int updateByPrimaryKeySelective(Record record);
+    int updateByPrimaryKeySelective(Model model);
 
-    int updateByPrimaryKeyWithBLOBs(Record record);
+    int updateByPrimaryKeyWithBLOBs(Model model);
 
-    int updateByPrimaryKey(Record record);
+    int updateByPrimaryKey(Model model);
 
     int deleteByPrimaryKeys(String ids);
 

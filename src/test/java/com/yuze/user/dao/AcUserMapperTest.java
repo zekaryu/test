@@ -1,6 +1,6 @@
 package com.yuze.user.dao;
 
-import com.yuze.user.model.AcUser;
+import com.yuze.framework.dao.IBaseDaoTest;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ public class AcUserMapperTest extends IBaseDaoTest {
 
 
     @Autowired
-    private AcUserMapper acUserMapper;
+//    private AcUserMapper acUserMapper;
 
     @org.junit.Test
     public void countByExample() throws Exception {
@@ -30,10 +30,10 @@ public class AcUserMapperTest extends IBaseDaoTest {
     public void insert() throws Exception {
 
 
-        AcUser user = new AcUser();
-        user.setIsActive((byte) 1);
+//        AcUser user = new AcUser();
+//        user.setIsActive((byte) 1);
 
-        acUserMapper.insert(user);
+//        acUserMapper.insert(user);
     }
 
     @Test

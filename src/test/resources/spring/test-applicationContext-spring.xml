@@ -29,6 +29,8 @@
     </bean>
 
     <import resource="classpath*:spring/applicationContext-mybatis.xml"/>
+    <import resource="classpath*:spring/applicationContext-shiro.xml"/>
     <import resource="classpath*:spring/applicationContext-spring.xml"/>
+    <import resource="classpath*:spring/springMVC-servlet.xml"/>
 
 </beans>

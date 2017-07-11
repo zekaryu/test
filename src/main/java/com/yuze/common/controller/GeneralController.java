@@ -2,21 +2,17 @@ package com.yuze.common.controller;
 
 import com.yuze.framework.controller.BaseController;
 
+import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.io.FileNotFoundException;
-
-import javax.servlet.http.HttpServletResponse;
-
 /**
  * Created by yuze on 2017/6/21.
  */
 @Controller
-@RequestMapping({"/"})
 public class GeneralController extends BaseController {
     /**
      * Logger:日志记录器.
@@ -24,16 +20,37 @@ public class GeneralController extends BaseController {
      */
     private static final Logger logger = LoggerFactory.getLogger(GeneralController.class);
 
-
-
-    @RequestMapping("404")
-    public String go404(HttpServletResponse response) throws FileNotFoundException {
-        response.setStatus(404);
-        return "404";
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public String index() {
+        return "index";
     }
 
-    @RequestMapping(value = "login", method = RequestMethod.GET)
-    public String goLoginPage(){
-        return "login";
+    /**
+     * dashboard页
+     */
+    @RequestMapping("/dashboard")
+    public String dashboard() {
+        return "dashboard";
+    }
+
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+        org.apache.shiro.subject.Subject subject = SecurityUtils.getSubject();
+        // 已登陆则 跳到首页
+        if (subject.isAuthenticated()) {
+            return "redirect:/";
+        }
+        return "/login";
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String main() {
+        org.apache.shiro.subject.Subject subject = SecurityUtils.getSubject();
+        // 已登陆则 跳到首页
+        if (subject.isAuthenticated()) {
+            return "/index";
+        }
+        return "redirect:/login";
     }
 }
